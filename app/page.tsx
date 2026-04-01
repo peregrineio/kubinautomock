@@ -1,6 +1,6 @@
 import HeroRedesign from '@/components/sections/home/HeroRedesign'
 import StatsBarRedesign from '@/components/sections/home/StatsBarRedesign'
-import ServicesGridRedesign from '@/components/sections/home/ServicesGridRedesign'
+import ServicesMarquee from '@/components/sections/home/ServicesMarquee'
 import StoryRedesign from '@/components/sections/home/StoryRedesign'
 import AggieFamilyRedesign from '@/components/sections/home/AggieFamilyRedesign'
 import TestimonialsRedesign from '@/components/sections/home/TestimonialsRedesign'
@@ -11,7 +11,7 @@ export default function HomePage() {
     <>
       <HeroRedesign />
       <StatsBarRedesign />
-      <ServicesGridRedesign />
+      <ServicesMarquee />
       <StoryRedesign />
       <AggieFamilyRedesign />
       <TestimonialsRedesign />
