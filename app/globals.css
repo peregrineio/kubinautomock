@@ -5,11 +5,38 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  /* Kubin Workshop Chronicle Design System */
+  --color-petroleum: #0A1628;
+  --color-petroleum-light: #132238;
+  --color-workshop-amber: #D97706;
+  --color-rust: #B45309;
+  --color-parchment: #FAF7F2;
+  --color-aged-paper: #F5F0E6;
+  --color-ink: #1C1917;
+  --color-graphite: #44403C;
+  --color-oil-stain: rgba(10, 22, 40, 0.08);
+
+  /* Legacy colors for compatibility */
+  --color-navy-black: #0A1628;
+  --color-navy-deep: #132238;
+  --color-cream-bright: #FAF7F2;
+  --color-cream-border: #E7E0D5;
+  --color-amber-electric: #D97706;
+  --color-amber-muted: #92400E;
+  --color-amber-bg: #FEF3C7;
+  --color-slate-body: #44403C;
+
+  /* Fonts */
+  --font-display: var(--font-display), system-ui;
+  --font-body: var(--font-body), Georgia, serif;
+  --font-handwritten: var(--font-handwritten), cursive;
+
+  /* ShadCN Color Mappings */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-sans);
+  --font-sans: var(--font-body);
   --font-mono: var(--font-geist-mono);
-  --font-heading: var(--font-sans);
+  --font-heading: var(--font-display);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -49,38 +76,62 @@
 }
 
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
+  /* Workshop Chronicle Design System */
+  --petroleum: #0A1628;
+  --petroleum-light: #132238;
+  --workshop-amber: #D97706;
+  --rust: #B45309;
+  --parchment: #FAF7F2;
+  --aged-paper: #F5F0E6;
+  --ink: #1C1917;
+  --graphite: #44403C;
+  --oil-stain: rgba(10, 22, 40, 0.08);
+
+  /* Legacy compatibility */
+  --navy-black: #0A1628;
+  --navy-deep: #132238;
+  --cream-bright: #FAF7F2;
+  --cream-border: #E7E0D5;
+  --amber-electric: #D97706;
+  --amber-muted: #92400E;
+  --amber-bg: #FEF3C7;
+  --slate-body: #44403C;
+  --white: #FFFFFF;
+  --border-subtle: #E7E0D5;
+
+  /* ShadCN overrides */
+  --background: #FAF7F2;
+  --foreground: #1C1917;
+  --card: #FFFFFF;
+  --card-foreground: #1C1917;
+  --popover: #FFFFFF;
+  --popover-foreground: #1C1917;
+  --primary: #D97706;
+  --primary-foreground: #FFFFFF;
+  --secondary: #F5F0E6;
+  --secondary-foreground: #1C1917;
+  --muted: #F5F0E6;
+  --muted-foreground: #44403C;
+  --accent: #FEF3C7;
+  --accent-foreground: #1C1917;
   --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --border: #E7E0D5;
+  --input: #E7E0D5;
+  --ring: #D97706;
+  --chart-1: #D97706;
+  --chart-2: #B45309;
+  --chart-3: #0A1628;
+  --chart-4: #132238;
+  --chart-5: #44403C;
+  --radius: 0rem;
+  --sidebar: #0A1628;
+  --sidebar-foreground: #FAF7F2;
+  --sidebar-primary: #D97706;
+  --sidebar-primary-foreground: #0A1628;
+  --sidebar-accent: #132238;
+  --sidebar-accent-foreground: #FAF7F2;
+  --sidebar-border: rgba(250, 247, 242, 0.1);
+  --sidebar-ring: #D97706;
 }
 
 .dark {
@@ -123,8 +174,175 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-body), Georgia, serif;
+    background-color: var(--parchment);
+    color: var(--graphite);
   }
   html {
-    @apply font-sans;
+    font-family: var(--font-body), Georgia, serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display), system-ui;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display), system-ui;
+  }
+  .font-body {
+    font-family: var(--font-body), Georgia, serif;
+  }
+  .font-handwritten {
+    font-family: var(--font-handwritten), cursive;
+  }
+
+  /* Workshop Chronicle utilities */
+  .bg-petroleum {
+    background-color: var(--petroleum);
+  }
+  .bg-petroleum-light {
+    background-color: var(--petroleum-light);
+  }
+  .text-petroleum {
+    color: var(--petroleum);
+  }
+  .bg-parchment {
+    background-color: var(--parchment);
+  }
+  .bg-aged-paper {
+    background-color: var(--aged-paper);
+  }
+  .text-workshop-amber {
+    color: var(--workshop-amber);
+  }
+  .bg-workshop-amber {
+    background-color: var(--workshop-amber);
+  }
+  .text-rust {
+    color: var(--rust);
+  }
+  .text-ink {
+    color: var(--ink);
+  }
+  .text-graphite {
+    color: var(--graphite);
+  }
+
+  /* Legacy compatibility */
+  .text-cream {
+    color: var(--cream-bright);
+  }
+  .bg-navy {
+    background-color: var(--navy-black);
+  }
+  .bg-cream {
+    background-color: var(--cream-bright);
+  }
+  .text-amber-electric {
+    color: var(--amber-electric);
+  }
+  .bg-amber-electric {
+    background-color: var(--amber-electric);
+  }
+  .border-amber-electric {
+    border-color: var(--amber-electric);
+  }
+  .text-navy-black {
+    color: var(--navy-black);
+  }
+  .bg-navy-black {
+    background-color: var(--navy-black);
+  }
+  .bg-navy-deep {
+    background-color: var(--navy-deep);
+  }
+  .text-cream-bright {
+    color: var(--cream-bright);
+  }
+  .bg-cream-bright {
+    background-color: var(--cream-bright);
+  }
+  .border-cream-border {
+    border-color: var(--cream-border);
+  }
+  .text-slate-body {
+    color: var(--slate-body);
+  }
+  .text-amber-muted {
+    color: var(--amber-muted);
+  }
+  .bg-amber-bg {
+    background-color: var(--amber-bg);
+  }
+
+  /* Workshop Chronicle section styles */
+  .section-eyebrow {
+    font-family: var(--font-body), Georgia, serif;
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    color: var(--workshop-amber);
+  }
+  .section-headline-dark {
+    font-family: var(--font-display), system-ui;
+    font-weight: 400;
+    color: var(--parchment);
+    line-height: 0.9;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+  }
+  .section-headline-light {
+    font-family: var(--font-display), system-ui;
+    font-weight: 400;
+    color: var(--petroleum);
+    line-height: 0.9;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+  }
+
+  /* Texture overlays */
+  .noise-overlay {
+    position: relative;
+  }
+  .noise-overlay::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    opacity: 0.03;
+    pointer-events: none;
+    mix-blend-mode: overlay;
+  }
+
+  /* Halftone effect for images */
+  .halftone {
+    position: relative;
+  }
+  .halftone::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, transparent 0%, transparent 50%, var(--petroleum) 51%);
+    background-size: 4px 4px;
+    opacity: 0.15;
+    mix-blend-mode: multiply;
+    pointer-events: none;
+  }
+
+  /* Diagonal slash */
+  .diagonal-slash {
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4rem), 0 100%);
+  }
+
+  /* Stamped number effect */
+  .stamped {
+    text-shadow:
+      2px 2px 0 var(--petroleum-light),
+      -1px -1px 0 rgba(0,0,0,0.1);
+    letter-spacing: -0.05em;
   }
 }
