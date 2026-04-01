@@ -47,7 +47,7 @@ const serviceVisuals: Record<string, { image: string; alt: string }> = {
     alt: 'Car electrical system'
   },
   'fleet': {
-    image: 'https://images.unsplash.com/photo-1586191582056-e8e1c5c5a4ec?w=600&h=800&fit=crop',
+    image: 'https://images.unsplash.com/photo-1532581140115-3e355d1ed1de?w=600&h=800&fit=crop',
     alt: 'Fleet of vehicles'
   },
 }
