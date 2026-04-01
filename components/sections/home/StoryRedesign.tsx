@@ -41,7 +41,7 @@ export default function StoryRedesign() {
                 className="relative aspect-[4/5] overflow-hidden"
               >
                 <Image
-                  src="https://images.unsplash.com/photo-1694155735994-c8c8edfd34e0?w=800&h=1000&fit=crop"
+                  src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=800&h=1000&fit=crop"
                   alt="Frank Kubin working"
                   fill
                   className="object-cover"
